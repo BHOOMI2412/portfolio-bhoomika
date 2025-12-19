@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhoomika S - Software Developer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header-content h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header-content p {
+            font-size: 1.3em;
+            opacity: 0.9;
+        }
+        
+        .header-content .location {
+            font-size: 1em;
+            margin-top: 10px;
+            opacity: 0.8;
+        }
+        
+        .nav {
+            background: white;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 100;
+        }
+        
+        .nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        
+        .nav a {
+            text-decoration: none;
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+        
+        .nav a:hover {
+            color: #764ba2;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            background: white;
+            margin-bottom: 30px;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        h2 {
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #764ba2;
+            padding-bottom: 10px;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .skill-badge {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .skill-badge:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .project-card {
+            border: 2px solid #667eea;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+        
+        .project-card:hover {
+            background: #f0f4ff;
+            border-color: #764ba2;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+        
+        .project-card h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        .project-card .project-link {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 15px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        
+        .project-card .project-link:hover {
+            background: #764ba2;
+        }
+        
+        .contact-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        
+        .contact-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .contact-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 50px;
+        }
+        
+        @media (max-width: 768px) {
+            .header-content h1 {
+                font-size: 2em;
+            }
+            
+            .nav ul {
+                gap: 15px;
+            }
+            
+            section {
+                padding: 20px;
+            }
+            
+            h2 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Bhoomika S</h1>
+            <p>Software Developer | ML Enthusiast</p>
+            <p class="location">India</p>
+        </div>
+    </header>
+    
+    <nav class="nav">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hi! I'm Bhoomika, a passionate software developer with expertise in building applications using Python, Flask, and modern web technologies. I have a strong foundation in machine learning and data analysis. I love solving complex problems and creating efficient solutions.</p>
+            <p style="margin-top: 15px;">Currently working on projects that involve ML algorithms, web development, and data analysis. Always eager to learn new technologies and best practices in software development.</p>
+        </section>
+        
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-badge">Python</div>
+                <div class="skill-badge">Flask</div>
+                <div class="skill-badge">JavaScript</div>
+                <div class="skill-badge">HTML/CSS</div>
+                <div class="skill-badge">Machine Learning</div>
+                <div class="skill-badge">TensorFlow</div>
+                <div class="skill-badge">Data Analysis</div>
+                <div class="skill-badge">SQL</div>
+                <div class="skill-badge">Git</div>
+                <div class="skill-badge">REST APIs</div>
+            </div>
+        </section>
+        
+        <section id="projects">
+            <h2>Projects</h2>
+            
+            <div class="project-card">
+                <h3>Main Project - ML Application</h3>
+                <p>A Python and ML algorithm-based project showcasing practical applications of machine learning. Built with Flask backend and interactive visualizations.</p>
+                <p style="margin-top: 10px; color: #666; font-size: 0.95em;">Technologies: Python, TensorFlow, Flask, NumPy, Matplotlib</p>
+                <a href="https://main-project-o1gt.onrender.com" class="project-link" target="_blank">View Project</a>
+            </div>
+            
+            <div class="project-card">
+                <h3>Portfolio Website</h3>
+                <p>Professional portfolio website built with HTML, CSS, and JavaScript. Features responsive design, smooth animations, and interactive elements.</p>
+                <p style="margin-top: 10px; color: #666; font-size: 0.95em;">Technologies: HTML5, CSS3, JavaScript, Responsive Design</p>
+                <a href="https://github.com/BHOOMI2412/portfolio-bhoomika" class="project-link" target="_blank">View on GitHub</a>
+            </div>
+        </section>
+        
+        <section id="contact">
+            <h2>Let's Connect</h2>
+            <p style="text-align: center; margin-bottom: 20px;">Feel free to reach out! I'm always interested in new opportunities and collaborations.</p>
+            <div class="contact-links">
+                <a href="mailto:bhoomika.vs.2412@gmail.com" class="contact-btn">📧 Email Me</a>
+                <a href="https://github.com/BHOOMI2412" class="contact-btn" target="_blank">🐙 GitHub</a>
+                <a href="https://www.linkedin.com/in/bhoomika-vgs-76a086259" class="contact-btn" target="_blank">💼 LinkedIn</a>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Bhoomika S. All rights reserved. | Built with HTML, CSS & JavaScript</p>
+    </footer>
+    
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('.nav a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                if (targetSection) {
+                    targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+        
+        // Add animation to skill badges on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeInUp 0.6s ease forwards';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.skill-badge').forEach(badge => {
+            observer.observe(badge);
+        });
+        
+        // Define fadeInUp animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        `;
+        document.head.appendChild(style);
+        
+        // Add click feedback for contact buttons
+        document.querySelectorAll('.contact-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                console.log('Contact:', this.textContent);
+            });
+        });
+    </script>
+</body>
+</html>
